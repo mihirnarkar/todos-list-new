@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import { Todos } from './components/Todos';
@@ -9,7 +8,7 @@ function App() {
   return (
     <>
     {/* Using Navbar from Header component*/}
-    <Header/>
+    <Header title="| MyTodo |" searchBar={true}/>
 
 
     {/* Using Todos from Todos component */}
