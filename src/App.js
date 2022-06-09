@@ -1,24 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import { Todos } from './components/Todos';
+import { Footer } from './components/Footer';
 
 function App() {
+  let name = "Mihir" // Creating varaibles in react
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {/* Using Navbar from Header component*/}
+    <Header/>
+
+
+    {/* Using Todos from Todos component */}
+    <Todos/>
+
+
+    {/* Using Footer from Footer compoennt*/}
+    <Footer/>
+    </>
   );
 }
 
