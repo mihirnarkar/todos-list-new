@@ -17,7 +17,7 @@ export default function Header(props) {
 
 
 
-                        <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div className="modal-dialog">
                                 <div className="modal-content">
                                     <div className="modal-header">
@@ -27,24 +27,20 @@ export default function Header(props) {
                                     <div className="modal-body">
                                         <form>
                                             <div className="mb-3">
-                                                <label for="exampleInputEmail1" className="form-label">Email address</label>
-                                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"/>
-                                                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                                                <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
+                                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                                                <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                                             </div>
                                             <div className="mb-3">
-                                                <label for="exampleInputPassword1" className="form-label">Password</label>
-                                                <input type="password" className="form-control" id="exampleInputPassword1"/>
+                                                <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
+                                                <input type="password" className="form-control" id="exampleInputPassword1" />
                                             </div>
-                                            <div className="mb-3 form-check">
-                                                <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
-                                                    <label className="form-check-label" for="exampleCheck1">Check me out</label>
+                                            <div className="mb-3">
+                                                <label htmlFor="exampleFormControlTextarea1" className="form-label">Lets discuss! post your query</label>
+                                                <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                                             </div>
                                             <button type="submit" className="btn btn-primary">Submit</button>
                                         </form>
-                                    </div>
-                                    <div className="modal-footer">
-                                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" className="btn btn-primary">Save changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -57,7 +53,7 @@ export default function Header(props) {
                             <button className="btn btn-outline-success" type="submit">Search</button>
                         </form> : ""
                     }
-                    <button type="button" className="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" className="btn btn-outline-primary me-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Contact Us
                     </button>
                 </div>
