@@ -3,7 +3,7 @@ import Header from './components/Header';
 import { Todos } from './components/Todos';
 import { Footer } from './components/Footer';
 import { AddTodo } from './components/AddTodo';  //always use capital while naming otherwise it will not work
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 
 function App() {
   let initTodo
@@ -38,11 +38,13 @@ function App() {
     }
     setTodos([...todos,myTodo])
     console.log(myTodo)
-
-    localStorage.setItem("todos",JSON.stringify(todos))
   }
 
   const [todos, setTodos] = useState(initTodo)
+  useEffect(()=>{
+    localStorage.setItem("todos",JSON.stringify(todos))
+  },[todos])
+  
 
   return (
     <>
